@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ========================================
+   SOLUTION PROPRE - EXTRÉMITÉS GAUCHE/DROITE
+   ======================================== */
+
+/* Reset global pour éviter les marges/padding indésirables */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* App container principal pour étendre aux extrémités */
+app-root {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Composants principaux étendus aux extrémités */
+app-header,
+app-footer,
+app-home,
+app-contact {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Forcer l'extension complète pour les sections principales */
+.hero-section,
+.contact-section,
+.partners-section,
+.services-section,
+.header-portfolio,
+.footer-innovant {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Technique pour étendre réellement aux bords de l'écran */
+.full-width-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+}
+
+/* Protection contre le scroll horizontal */
+body {
+  overflow-x: hidden;
+}
+
+/* Responsive - maintenir l'extension sur tous les écrans */
+@media (max-width: 1400px) {
+  .hero-section,
+  .contact-section,
+  .partners-section,
+  .services-section,
+  .header-portfolio,
+  .footer-innovant {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .contact-section,
+  .partners-section,
+  .services-section,
+  .header-portfolio,
+  .footer-innovant {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

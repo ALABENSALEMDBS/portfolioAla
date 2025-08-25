@@ -1,0 +1,19 @@
+<header class="header-portfolio" [class.fixed-header]="isFixed" [class.header-hidden]="!isVisible">
+	<div class="hamburger-menu" (click)="toggleMenu()" [class.open]="isMenuOpen">
+		<span class="bar" [class.bar1-open]="isMenuOpen"></span>
+		<span class="bar" [class.bar2-open]="isMenuOpen"></span>
+		<span class="bar" [class.bar3-open]="isMenuOpen"></span>
+	</div>
+	<nav class="nav-portfolio" [class.active]="isMenuOpen">
+		<ul>
+			<li><a routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
+			<li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+			<li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
+			<li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+		</ul>
+	</nav>
+	<button class="header-cta-button" routerLink="/projects">
+		My Portfolio →
+	</button>
+	<img src="/images/logo.png" alt="Logo" class="header-logo" />
+</header>
